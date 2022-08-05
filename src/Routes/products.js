@@ -4,6 +4,8 @@ import productsControllers from '../Controllers/products';
 const router = express.Router();
 
 router
-  .get('/', productsControllers.getAll);
+  .get('/:id', productsControllers.getById)
+  .get('/', productsControllers.getAllProducts)
+  .post('/', productsControllers.createProduct);
 
 export default router;
