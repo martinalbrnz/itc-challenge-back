@@ -6,6 +6,7 @@ const ProductsValidation = (req, res, next) => {
     description: Joi.string().messages({ 'string.empty': 'Description is a required field' }),
     image_url: Joi.string().uri(),
     price: Joi.number().min(0).precision(2).required(),
+    brand: Joi.string().length(24).required(),
   });
   const validation = ProductSchema.validate(req.body);
   if (validation.error) {

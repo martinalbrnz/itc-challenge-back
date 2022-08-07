@@ -2,7 +2,7 @@ import Products from '../Models/Products';
 
 const getAllProducts = async (req, res) => {
   try {
-    const data = await Products.find();
+    const data = await Products.find().populate('brand', { _id: 0, name: 1, logo_url: 1 });
     return res
       .status(200)
       .json({
@@ -32,7 +32,7 @@ const getById = async (req, res) => {
           error: true,
         });
     }
-    const data = await Products.findById(req.params.id);
+    const data = await Products.findById(req.params.id).populate('brand', { _id: 0, name: 1, logo_url: 1 });
     if (!data) {
       return res
         .status(404)
@@ -93,7 +93,7 @@ const updateProduct = async (req, res) => {
           error: true,
         });
     }
-    const data = await Products.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const data = await Products.findByIdAndUpdate(req.params.id, req.body, { new: true }).populate('brand', { _id: 0, name: 1, logo_url: 1 });
     if (!data) {
       return res
         .status(404)
