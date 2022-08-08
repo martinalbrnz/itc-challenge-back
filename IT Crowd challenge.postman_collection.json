@@ -1,188 +1,249 @@
 {
-	"info": {
-		"_postman_id": "cd194897-2102-40c0-b26a-4baa1ca4efc1",
-		"name": "IT Crowd challenge",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19071111"
-	},
-	"item": [
-		{
-			"name": "Products",
-			"item": [
-				{
-					"name": "GET all products",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET by id",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/products/62ed6b1e5d44c2b81dd8f9ad",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products",
-								"62ed6b1e5d44c2b81dd8f9ad"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST product",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Sugar canelin\",\r\n    \"description\": \"Sugarcane or sugar cane is a species of tall, perennial grass that is used for sugar production.\",\r\n    \"image_url\": \"\",\r\n    \"price\": 2.50\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PUT product by id",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Sugar canelineitor\",\r\n    \"description\": \"Sugarcanelineitor or sugar cane is a species of small, perennial grass that is used for sugar production.\",\r\n    \"image_url\": \"\",\r\n    \"price\": 3.60\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/products/62ed6b1e5d44c2b81dd8f9ad",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products",
-								"62ed6b1e5d44c2b81dd8f9ad"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE product by id",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/products/62ed70bd4ee91b296d72e360",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products",
-								"62ed70bd4ee91b296d72e360"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST errors",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"\",\r\n    \"image_url\": \"\",\r\n    \"price\": \"hello\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/products",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PUT errors",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"\",\r\n    \"image_url\": \"\",\r\n    \"price\": \"hello\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/products/62ed6b1e5d44c2b81dd8f9ad",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"products",
-								"62ed6b1e5d44c2b81dd8f9ad"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "cd194897-2102-40c0-b26a-4baa1ca4efc1",
+    "name": "IT Crowd challenge",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "19071111"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "GET all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products/62ed6b1e5d44c2b81dd8f9ad",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products",
+                "62ed6b1e5d44c2b81dd8f9ad"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Mac Book Super PRO\",\r\n    \"description\": \"More PRO than ever, USB ports bought appart\",\r\n    \"image_url\": \"https://dummyjson.com/image/i/products/6/thumbnail.png\",\r\n    \"price\": 2099,\r\n    \"brand\": \"62f0202f37827fc0a3f41c81\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT product by id",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"IPhone 9\",\r\n    \"description\": \"A not at all suspicious apple phone\",\r\n    \"image_url\": \"https://dummyjson.com/image/i/products/1/thumbnail.jpg\",\r\n    \"price\": 504,\r\n    \"brand\": \"62f0202f37827fc0a3f41c81\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products/62ed6b1e5d44c2b81dd8f9ad",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products",
+                "62ed6b1e5d44c2b81dd8f9ad"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE product by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products/62ed70bd4ee91b296d72e360",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products",
+                "62ed70bd4ee91b296d72e360"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST errors",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"\",\r\n    \"image_url\": \"\",\r\n    \"price\": \"hello\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT errors",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"\",\r\n    \"description\": \"\",\r\n    \"image_url\": \"\",\r\n    \"price\": \"hello\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/products/62ed6b1e5d44c2b81dd8f9ad",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "products",
+                "62ed6b1e5d44c2b81dd8f9ad"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Brands",
+      "item": [
+        {
+          "name": "GET brands",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/brands",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST brand",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Dali\",\r\n    \"logo_url\": \"https://asset.brandfetch.io/idAnDTFapY/idkdJXusIB.png\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://itc-challenge-back.vercel.app/brands",
+              "protocol": "http",
+              "host": [
+                "itc-challenge-back",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "brands"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
